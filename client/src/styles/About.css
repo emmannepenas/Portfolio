@@ -1,0 +1,198 @@
+.about-section {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 3rem 1.5rem 5rem 1.5rem;
+    background: radial-gradient(circle at 50% 20%, #0c202d 0%, #05131e 100%);
+    color: #e2f1f8;
+    gap: 2.5rem;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.fade-in {
+    animation: pageFadeIn 0.8s ease-out forwards;
+}
+
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes statusPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 0.6;
+    }
+}
+
+.about-hero-card {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.hero-avatar-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.avatar-ring {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    padding: 4px;
+    background: linear-gradient(135deg, #00d4b4, #00f2fe);
+    box-shadow: 0 0  30px rgba(0, 212, 180, 0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-avatar-ring {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #05131e;
+}
+
+.welcome-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 18px;
+    background: rgba(0, 212, 180, 0.08);
+    border: 1px solid rgba(0, 212, 180, 0.3);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #00d4b4;
+    font-weight: 500;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #00d4b4;
+    border-radius: 50%;
+    animation: statusPulse 1.8s infinite ease-in-out;
+}
+
+.hero-text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    max-width: 800px;
+}
+
+.hero-name-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.35;
+    margin: 0;
+}
+
+.highlighted-cyan {
+    color: #00d4b4;
+}
+
+.hero-bio {
+    color: #93aebd;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 680px;
+    margin: 0;
+}
+
+.bio-card {
+    width: 100%;
+    max-width: 900px;
+    background: linear-gradient(145deg, rgba(12,32, 45, 0.8), rgba(5, 19, 30, 0.95));
+    border: 1px solid rgba(0, 212, 180, 0.2);
+    border-radius: 20px;
+    padding: 2.5rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0  10px 30px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.bio-card h3 {
+    font-size: 1.6rem;
+    color: #ffffff;
+    margin: 0 0 0.5rem 0;
+}
+
+.bio-card p {
+    color: #93aebd;
+    line-height: 1.65;
+    font-size: 0.98rem;
+    margin: 0;
+}
+
+.quick-facts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-top: 1.5rem;
+    border: 1px solid rgba(0, 212, 180, 0.15);
+    flex-wrap: wrap;
+}
+
+.fact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    background: rgba(0, 212, 180, 0.05);
+    border: 1px solid rgba(0, 212, 180, 0.15);
+    padding: 0.85rem 1.2rem;
+    border-radius: 12px;
+    flex: 1;
+    min-width: 140px;
+}
+
+.fact-title {
+    font-size: 0.75rem;
+    color: #7b9bb0;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-weight: 600;
+}
+
+.fact-value.available {
+    color: #00d4b4;
+}
+
+@media(max-width: 768px) {
+    .hero-name-title {
+        font-size: 1.7rem;
+    }
+    .avatar-ring {
+        width: 130px;
+        height: 130px;
+    }
+}
