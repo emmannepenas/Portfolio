@@ -14,7 +14,9 @@ app.use(cors({
 app.use(express.json());
 
 const transporter = nodemailer.createTransport({
-    service: 'gamil',
+    host: 'smtp.gamil.comn',
+    port: 456,
+    secure: true,
     auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS
